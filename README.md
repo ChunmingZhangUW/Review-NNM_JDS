@@ -72,5 +72,7 @@ Readme File: Copy all files into a common directory.
   - Figure 3 Inputs:
 
     Left:   Input '1, 1' for SGD.
+
     Middle: Input '1, 3' for mini-BGD.
+
     Right:  Input '1, 5' for mini-BGD.

@@ -31,7 +31,7 @@ Readme File: Copy all files into a common directory.
     Feedforward NN training method:
         1: Mini-BGD;  2: Adam;  3: Toolbox fitnet
 
-    Figure Inputs:
+  - Figure Inputs:
 
     Figure (a): Input '1, 1'
 
@@ -51,7 +51,7 @@ Readme File: Copy all files into a common directory.
 
     Run "Example_1_binary_classification.m".
 
-    Figure 2 Panel Inputs:
+  - Figure 2 Panel Inputs:
 
     Panel (a): Input '4' for logistic regression.
 
@@ -69,9 +69,8 @@ Readme File: Copy all files into a common directory.
 
     Panel (d): Input '5' for toolbox.
 
-Figure 3 Inputs:
+  - Figure 3 Inputs:
 
     Left:   Input '1, 1' for SGD.
     Middle: Input '1, 3' for mini-BGD.
     Right:  Input '1, 5' for mini-BGD.
-    

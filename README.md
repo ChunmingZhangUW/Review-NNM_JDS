@@ -31,13 +31,18 @@ Readme File: Copy all five directories into a common directory.
     Figure Inputs:
 
     Figure (a): Input '1, 1'
+   
     Figure (b): Input '1, 2'
+
     Figure (c): Input '1, 3'
+
     Figure (d): Input '2, 1'
+
     Figure (e): Input '2, 2'
+
     Figure (f): Input '2, 3'
 
-4. Numerical Experiments for FNN (Binary Classification)
+5. Numerical Experiments for FNN (Binary Classification)
 
    To conduct numerical experiments for FNN applied to binary classification, go to the directory 'Matlab_for_binary-classification/':
 

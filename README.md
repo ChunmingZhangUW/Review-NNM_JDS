@@ -4,7 +4,7 @@ Readme File for Demonstrating the Numerical Study: Copy all files into a single 
 
 1. To conduct Numerical Experiments for CNN  in Section 6.3: 
 
-    Run "Realdata_MNIST_CNN.m". 
+    Run "Realdata_MNIST_CNN.m". (The real data is embedded in the MATLAB package.)
 
 2. To conduct Numerical Experiments for LSTM  in Section B.1: 
 

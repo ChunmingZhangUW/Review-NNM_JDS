@@ -5,9 +5,6 @@
 clear;
 close all;
 
-% addpath('../shared_functions/Adam_algorithm/');
-% addpath('../shared_functions/shared_functions_NN/');
-
 rng(5000);
 
 %==== Part 1: A training dataset (X_train_matrix, Y_class_train_vector) ===
@@ -31,25 +28,6 @@ num_classes = numel(class_labels);
 Y_class_train_vector = zeros(num_obs_train, 1);
 Y_class_train_vector(1:floor(num_obs_train/2)) = 1;
 Y_class_train_vector((floor(num_obs_train/2)+1):num_obs_train) = 2;
-
-%--------------------------------------------------------------------------
-h_1 = figure(1);
-subplot(1, 1, 1);
-plot(...
-    X_train_matrix(1, Y_class_train_vector == 1), ...
-    X_train_matrix(2, Y_class_train_vector == 1), ...
-    'ro', 'MarkerSize', 12, 'LineWidth', 4);
-hold on;
-plot(...
-    X_train_matrix(1, Y_class_train_vector == 2), ...
-    X_train_matrix(2, Y_class_train_vector == 2), ...
-    'bx', 'MarkerSize', 12, 'LineWidth', 4);
-
-xlabel('\boldmath{$x_1$}', 'interpreter', 'latex', 'FontSize', 25);
-ylabel('\boldmath{$x_2$}', 'interpreter', 'latex', 'FontSize', 25);
-set(gca, 'XTick', [0 1], 'YTick', [0 1], 'FontWeight', 'Bold', 'FontSize', 20)
-xlim([0, 1]); ylim([0, 1]);
-
 
 %============================= inputs =====================================
 choice_opt_method = input([' Input choice_opt_method \n ' ...
@@ -251,7 +229,6 @@ elseif choice_opt_method == 4
     hat_beta_logistic = mdl.Coefficients.Estimate;
     toc
 
-    % Test the trained network on training data
     sigmoid_func = @(z) 1 ./ (1+exp(-z));
     for i = 1:num_obs_train
         design_train_vector = [1; X_train_matrix(:, i)];

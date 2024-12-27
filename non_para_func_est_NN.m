@@ -5,13 +5,10 @@
 clear;
 close all;
 
-% addpath('../shared_functions/Adam_algorithm/');
-% addpath('../shared_functions/shared_functions_NN/');
-
 rng(100)
 
 %==========================================================================
-choice_data = input(' Input choice (1: simulated; 2: real motorcycle) of data = ');
+choice_data = 1; % 1: simulated data
 choice_opt_method = input([' Input feedforward NN training method \n', ...
     '      (1: for mini-BGD; 2: for Adam; 3: for toolbox fitnet) = ']);
 
@@ -28,19 +25,6 @@ if     choice_data == 1 % simulated data
 
     title_data = 'simulated data';
 
-elseif choice_data == 2 % real data
-    load('realdata/motorcycle.dat');
-    data = motorcycle;
-
-    X_train_vector = data(:,1)';
-    Y_train_vector = data(:,2)';
-    num_obs_train  = length(X_train_vector);
-    X_train_vector = (X_train_vector - min(X_train_vector)) ...
-        / range(X_train_vector);
-    Y_train_vector = (Y_train_vector - min(Y_train_vector)) ...
-        / range(Y_train_vector);
-
-    title_data = 'motocycle data';
 end
 dim_X = size(X_train_vector, 1);
 dim_Y = size(Y_train_vector, 1);
@@ -60,8 +44,6 @@ if     choice_opt_method == 1 || choice_opt_method == 2 || ...
 
         if     choice_data == 1 % simulated data
             hiddenLayerSizes = [6, 4, 4, 6];
-        elseif choice_data == 2 % real motorcycle data
-            hiddenLayerSizes = [10, 8, 8, 6, 2, 6];
         end
     elseif choice_opt_method == 3
         hiddenLayerSizes = [6, 4, 4];
@@ -110,11 +92,6 @@ if     choice_opt_method == 1 || choice_opt_method == 2
 
     %---------------- train the NN model using our code -------------------
     cc = 1;
-    if     choice_opt_method == 1 && choice_data == 2
-        cc = 1;
-    elseif choice_opt_method == 2 && choice_data == 2
-        cc = 0.5;
-    end
 
     W_matrices_array_init = cell(num_layers, 1);
     b_vectors_array_init  = cell(num_layers, 1);
@@ -213,29 +190,18 @@ if     choice_data == 1
     set(legend, 'FontWeight', 'bold', 'Location', 'SouthEast', ...
         'Interpreter', 'latex', ...
         'FontSize', 8, 'ItemTokenSize', [20, 20]);
-elseif choice_data == 2
-    legend = legend('\textbf{orig.}', '\boldmath{$\widehat{m}(x)$}');
-    set(legend, 'FontWeight', 'bold', 'Location', 'SouthEast', ...
-        'Interpreter', 'latex', ...
-        'FontSize', 8, 'ItemTokenSize', [20, 20]);
 end
 if     choice_opt_method == 1
     title({...
         ['\textbf{', title_data, ', ', title_NN_method, '}'], ...
-        ['', num2str(num_nodes_vector), '', ...
-        ', \boldmath{$\eta=', num2str(learning_rate_specified), '$}'] ...
         }, 'Interpreter', 'latex');
 elseif choice_opt_method == 2
     title({...
         ['\textbf{', title_data, ', ', title_NN_method, '}'], ...
-        ['', num2str(num_nodes_vector), '', ...
-        ''], ...
         }, 'Interpreter', 'latex');
 elseif choice_opt_method == 3
     title({...
         ['\textbf{', title_data, ', toolbox ', title_NN_method, '}'], ...
-        ['', num2str(num_nodes_vector), '', ...
-        ''], ...
         }, 'Interpreter', 'latex');
 end
 xlabel('\boldmath{$x$}', 'Interpreter', 'latex');

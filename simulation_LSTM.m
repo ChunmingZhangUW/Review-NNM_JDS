@@ -5,10 +5,7 @@
 clear;
 close all;
 
-%addpath('shared_functions_LSTM/');
-
 grid_s_choice = 2;
-disp(' ');
 for LSTM_method = 1:2
     rng(202407);
 
@@ -79,7 +76,6 @@ for LSTM_method = 1:2
     elseif LSTM_method == 2
         name_method = 'toolbox'; name_method_title = 'Toolbox';
 
-        %------- Define the CNN architecture: sequenceInputLayer ----------
         seq_input_layer_LSTM = [
             sequenceInputLayer(dim_X, 'Name', 'input')
             lstmLayer(num_HiddenUnits, 'Name', 'lstm')
@@ -88,7 +84,6 @@ for LSTM_method = 1:2
             fullyConnectedLayer(num_neurons_fc_layer_3, 'Name', 'fc3')
             regressionLayer('Name', 'regressionoutput')];
 
-        %------- Specify training options: trainingOptions ----------------
         training_options_LSTM = trainingOptions('sgdm', ...
             InitialLearnRate = initial_learn_rate, ...
             MiniBatchSize = mini_batch_size, ...
@@ -101,7 +96,6 @@ for LSTM_method = 1:2
             Verbose = false);
     end
 
-    tic;
     %====================== train the LSTM model ==========================
     %-------------------- trained model -----------------------------------
     if     LSTM_method == 1
@@ -119,7 +113,6 @@ for LSTM_method = 1:2
         model_LSTM_toolbox = trainNetwork(X_train_array, Y_train_array, ...
             seq_input_layer_LSTM, training_options_LSTM);
     end
-    toc;
 
     %============== predict the test data Y_test_vector ===================
     %--------- predict the test data Y_test_vector

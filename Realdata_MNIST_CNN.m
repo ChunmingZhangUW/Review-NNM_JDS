@@ -14,48 +14,8 @@ num_classes = 10;
 dim_X = size(X_Train_array, 1:3);
 dim_Y = num_classes;
 
-%---------------------- visualize sample images ---------------------------
-ID_sample_Images_Train = zeros(num_classes, 1);
-freq_train_vector      = zeros(num_classes, 1);
-for k = 1:num_classes
-    digit = k - 1;
-    ID_sample_Images_Train(k) = find(Y_Train_array == categorical(digit), 1);
-    freq_train_vector(k)      = sum( Y_Train_array == categorical(digit), 1);
-end
-
-h_1 = figure(1);
-tiledlayout(2, 5)
-
-for k = 1:num_classes
-    i = ID_sample_Images_Train(k);
-    nexttile
-    sampleImage_train = X_Train_array(:, :, 1, i);
-    imshow(sampleImage_train);
-    title(['Digit: ', char(Y_Train_array(i, 1))]);
-end
-
 %----------------------- Load the MNIST test dataset ----------------------
 [X_Test_array,  Y_Test_array]  = digitTest4DArrayData;
-
-%---------------------- visualize sample images ---------------------------
-ID_sample_Images_Test = zeros(num_classes, 1);
-freq_test_vector      = zeros(num_classes, 1);
-for k = 1:num_classes
-    digit = k - 1;
-    ID_sample_Images_Test(k) = find(Y_Test_array == categorical(digit), 1);
-    freq_test_vector(k)      = sum( Y_Test_array == categorical(digit), 1);
-end
-
-h_2 = figure(2);
-tiledlayout(2, 5)
-
-for  k = 1:num_classes
-    i = ID_sample_Images_Test(k);
-    nexttile
-    sampleImage_test = X_Test_array(:, :, :, i);
-    imshow(sampleImage_test);
-    title(['Digit: ', char(Y_Test_array(i))]);
-end
 
 %=========================== Train the CNN model ==========================
 name_method = 'toolbox'; %name_method_title = 'Toolbox';

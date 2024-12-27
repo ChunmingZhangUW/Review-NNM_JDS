@@ -10,8 +10,8 @@ Readme File for Demonstrating the Numerical Study: Copy all files into a single 
 
     Run "simulation_LSTM.m". 
 
-3. To conduct Numerical Experiments for FNN (Nonparametric Regression) in Section 3: 
-
+3. To conduct Numerical Experiments for FNN (Nonparametric Regression) in Section 3:
+   
     Run "non_para_func_est_NN.m". This script generates the numerical study results.
 
     Input Details: Feedforward NN training method: 1: Mini-BGD;  2: Adam;  3: Toolbox fitnet

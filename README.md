@@ -28,7 +28,7 @@ Readme File for Demonstrating the Numerical Study: Copy all files into a single 
 
     Run "Example_1_binary_classification.m".
 
-  - Figure 2 Panel Inputs:
+  - Figure 2 Inputs:
 
     Panel (a): Input '4' for logistic regression.
 

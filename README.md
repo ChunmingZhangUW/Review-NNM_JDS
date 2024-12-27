@@ -15,8 +15,6 @@ Readme File: Copy all files into a common directory.
 
     Run "simulation_LSTM.m". This script generates the simulation study results in Section B.1.
 
-    Run "Realdata_LSTM.m".   This script generates the real data analysis results in Section B.2.
-
 3. Numerical Experiments for FNN (Nonparametric Regression)
 
    To conduct numerical experiments for FNN applied to nonparametric regression:

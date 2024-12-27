@@ -10,7 +10,7 @@ Readme File for Demonstrating the Numerical Study: Copy all files into a single 
 
     Run "simulation_LSTM.m". 
 
-3. To conduct Numerical Experiments for FNN (Nonparametric Regression) in Section 3:
+3. To conduct Numerical Experiments for FNN (Nonparametric Regression) in Section 4:
    
     Run "non_para_func_est_NN.m". This script generates the numerical study results.
 

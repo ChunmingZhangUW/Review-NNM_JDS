@@ -16,13 +16,13 @@ Readme File for Demonstrating the Numerical Study: Copy all files into a single 
 
     Input Details: Feedforward NN training method: 1: Mini-BGD;  2: Adam;  3: Toolbox fitnet
 
-  - Figure Inputs:
+  - Figure 4 Inputs:
 
-    Figure (a): Input '1'
+    Panel (a): Input '1'
 
-    Figure (b): Input '2'
+    Panel (b): Input '2'
 
-    Figure (c): Input '3'
+    Panel (c): Input '3'
 
 4. To conduct Numerical Experiments for FNN (Binary Classification) in Section 3: 
 
@@ -33,7 +33,9 @@ Readme File for Demonstrating the Numerical Study: Copy all files into a single 
     Panel (a): Input '4' for logistic regression.
 
     Panel (e) and Panel (f):
+    
         Panel (e): Input '2' for Adam.
+    
         Panel (f): Input '3' for NLLS.
 
     Panel (b) and Panel (c): The procedure is the same as for Panel (e) and Panel (f), except modify lines 145--146:
@@ -48,8 +50,8 @@ Readme File for Demonstrating the Numerical Study: Copy all files into a single 
 
   - Figure 3 Inputs:
 
-    Left:   Input '1, 1' for SGD.
+    Left panels:   Input '1, 1' for SGD.
 
-    Middle: Input '1, 3' for mini-BGD.
+    Middle panels: Input '1, 3' for mini-BGD.
 
-    Right:  Input '1, 5' for mini-BGD.
+    Right panels:  Input '1, 5' for mini-BGD.

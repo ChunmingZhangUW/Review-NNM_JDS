@@ -2,28 +2,19 @@
 
 Readme File for Demonstrating the Numerical Study: Copy all files into a single directory.
 
-1. Numerical Experiments for CNN
+1. To conduct Numerical Experiments for CNN  in Section 6.3: 
 
-   To conduct numerical experiments for CNN:
+    Run "Realdata_MNIST_CNN.m". 
 
-    Run "Realdata_MNIST_CNN.m". This script generates the results in Section 6.3.
+2. To conduct Numerical Experiments for LSTM  in Section B.1: 
 
-2. Numerical Experiments for LSTM
+    Run "simulation_LSTM.m". 
 
-   To conduct numerical experiments for LSTM:
+3. To conduct Numerical Experiments for FNN (Nonparametric Regression) in Section 3: 
 
-    Run "simulation_LSTM.m". This script generates the simulation study results in Section B.1.
+    Run "non_para_func_est_NN.m". This script generates the numerical study results.
 
-3. Numerical Experiments for FNN (Nonparametric Regression)
-
-   To conduct numerical experiments for FNN applied to nonparametric regression:
-
-    Run "non_para_func_est_NN.m". This script generates the numerical study results in Section 3.
-
-    Input Details:
-   
-    Feedforward NN training method:
-        1: Mini-BGD;  2: Adam;  3: Toolbox fitnet
+    Input Details: Feedforward NN training method: 1: Mini-BGD;  2: Adam;  3: Toolbox fitnet
 
   - Figure Inputs:
 
@@ -33,9 +24,7 @@ Readme File for Demonstrating the Numerical Study: Copy all files into a single 
 
     Figure (c): Input '3'
 
-4. Numerical Experiments for FNN (Binary Classification)
-
-   To conduct numerical experiments for FNN applied to binary classification:
+4. To conduct Numerical Experiments for FNN (Binary Classification) in Section 3: 
 
     Run "Example_1_binary_classification.m".
 

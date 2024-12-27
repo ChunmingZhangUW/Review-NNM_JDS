@@ -21,26 +21,17 @@ Readme File for Demonstrating the Numerical Study: Copy all files into a single 
     Run "non_para_func_est_NN.m". This script generates the numerical study results in Section 3.
 
     Input Details:
-
-    Data type:
-        1: Simulated data;  2: Real motorcycle data
-
+   
     Feedforward NN training method:
         1: Mini-BGD;  2: Adam;  3: Toolbox fitnet
 
   - Figure Inputs:
 
-    Figure (a): Input '1, 1'
+    Figure (a): Input '1'
 
-    Figure (b): Input '1, 2'
+    Figure (b): Input '2'
 
-    Figure (c): Input '1, 3'
-
-    Figure (d): Input '2, 1'
-
-    Figure (e): Input '2, 2'
-
-    Figure (f): Input '2, 3'
+    Figure (c): Input '3'
 
 4. Numerical Experiments for FNN (Binary Classification)
 

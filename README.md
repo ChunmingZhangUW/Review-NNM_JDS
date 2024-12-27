@@ -1,7 +1,6 @@
 # A statistician’s selective review of neural network modeling: algorithms and applications
 
-Readme File: Copy all files into a common directory.
-
+Readme File for Demonstrating the Numerical Study: Copy all files into a single directory.
 
 1. Numerical Experiments for CNN
 

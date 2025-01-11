@@ -1,6 +1,10 @@
 # A statistician’s selective review of neural network modeling: algorithms and applications
 
-Readme File for Demonstrating the Numerical Study: Copy all files into a single directory.
+README file for demonstrating the numerical study in the paper:
+
+Zhang, C.M., Zhang, Z.J., Zhong, X.R., Li, J.L., and Zhao, Z.H. (2024). A statistician’s selective review of neural network modeling: algorithms and applications. Journal of Data Science, accepted. []
+
+Copy all files into a single directory.
 
 1. To conduct Numerical Experiments for CNN  in Section 6.3: 
 

@@ -2,7 +2,7 @@
 
 README file for demonstrating the numerical study in the paper:
 
-Zhang, C.M., Zhang, Z.J., Zhong, X.R., Li, J.L., and Zhao, Z.H. (2024). A statistician’s selective review of neural network modeling: algorithms and applications. Journal of Data Science, accepted. []
+Zhang, C.M., Zhang, Z.J., Zhong, X.R., Li, J.L., and Zhao, Z.H. (2024). A statistician’s selective review of neural network modeling: algorithms and applications. Journal of Data Science, accepted. [https://doi.org/10.6339/25-JDS1167]
 
 Copy all files into a single directory.
 
